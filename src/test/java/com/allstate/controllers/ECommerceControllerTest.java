@@ -45,7 +45,7 @@ public class ECommerceControllerTest {
     @Before
     public void setUp() throws Exception {
         product = new Product();
-        product.setId(1);
+        product.setId(2);
         product.setName("Apple");
         product.setStocknum("A123SL");
         product.setListprice(8);
@@ -55,11 +55,7 @@ public class ECommerceControllerTest {
     public void tearDown() throws Exception {
 
     }
-
-    @Test
-    public void shouldCreateAProduct() throws Exception{
-
-    }
+    
 
     @Test
     public void shouldCreateProduct() throws Exception {
@@ -73,7 +69,7 @@ public class ECommerceControllerTest {
         this.mvc.perform(request)
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id", is(1)))
+                .andExpect(jsonPath("$.id", is(2)))
                 .andExpect(jsonPath("$.name", is("Apple")));
     }
     @Test
@@ -86,7 +82,7 @@ public class ECommerceControllerTest {
         this.mvc.perform(request)
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id", is(1)))
+                .andExpect(jsonPath("$.id", is(2)))
                 .andExpect(jsonPath("$.name", is("Apple")));
     }
 
